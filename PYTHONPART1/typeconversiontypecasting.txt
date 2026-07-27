@@ -1,0 +1,12 @@
+type conversion means converting variables from one type to another 
+
+1.type conversion- implicit done automatically by Python
+a=5
+b=3.0
+print(a+b) #python converts ans in float by default
+
+2.type casting-explicitly done by dev
+x=10
+y=float(x)
+ can sometimes happen losssy conversion
+

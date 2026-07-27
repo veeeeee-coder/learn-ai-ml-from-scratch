@@ -1,0 +1,18 @@
+container which stores data or values
+
+the name of variables are called as identifiers and can have any datatype for a respective values
+
+name="veee"
+age=30
+pi=3.14
+
+RULES OF IDENTIFIERS:
+1.names must start with letter or underscore
+2.can contain letter,numbers,underscores after first character
+3.cannot use keywords
+
+NOTES:
+1. Python is dynamically typed(when creating variables no need to declare type explicitly)
+2. case sensitive
+3. indentation
+4. keywords are reserved words

@@ -1,0 +1,7 @@
+collection of char,numbers,symbols that our language recognizes 
+1.english letters-capital and small letters 
+2.0 to 9
+3.special symbols
+4.whitespaces escape characters
+5.ASCII AND unicode
+

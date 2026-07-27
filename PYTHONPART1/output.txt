@@ -1,0 +1,14 @@
+printing something on our screen 
+we can do this simple task using special function called
+print() function
+
+function is a specialized helper which performs a specific task
+print() allows to display something on screen
+
+print("hello world");
+print(3.14);
+print(2+3);
+
+each print statement displays output on different lines but we can also display multiple values on same line
+print("hello","world");
+

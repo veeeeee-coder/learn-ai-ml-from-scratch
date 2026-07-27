@@ -1,0 +1,13 @@
+input() function to take input from user,while program is running
+name=input("enter name");
+(returned as a string)
+
+for integers use type conversion
+int(input(enter number))
+
+
+#avg of 2 nos
+n1=int(input("enter n1"));
+n2=int(input("enter n2"));
+c=n1+n2/2;
+print(c);

@@ -1,0 +1,50 @@
+operator is a symbol that tells python to perform specific computation on one or more values(operands)
+
+print(1+3)  1 and 3 operands
+1.arithmatic operators
++
+-
+*
+/
+%
+**
+
+2.relational operators
+==
+!=
+>
+>=
+<
+<=
+gives either True or False
+
+3.assignment operators
+=
++=
+-=
+*=
+/=
+%=
+**=
+
+4.logical operators
+and 
+or 
+not 
+
+
+operator precedence
+()
+**
+unary
+*,/,%
++,-
+<< >>
+&
+^
+|
+comparision operators 
+not 
+and 
+or
+assignment operators

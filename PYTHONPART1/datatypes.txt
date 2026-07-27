@@ -1,0 +1,13 @@
+data type defines kind of value a variable can hold 
+
+int-int values(whole numbers)
+float-decimal nos 
+str-sequence of characters
+bool-True/False
+None-no value/null
+
+to check the type of variable use typeof 
+ x=10
+ print(typeof(x));
+ // <class 'int'>
+
