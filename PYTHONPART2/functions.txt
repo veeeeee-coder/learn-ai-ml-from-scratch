@@ -1,0 +1,51 @@
+blocks of reusable code that performs a specific task
+our code will be more organised,readable,easier to maintain
+
+def hello():
+print("hello fun")
+
+hello()  FUNC CALL
+
+function call actually invokes the function and all the code written in func definition is executed
+
+def sum(a,b):
+print(a+b)
+print(sum(5,10))
+
+#a,b are parameters and 5,10 are arguments
+functions can return something using return keyword
+
+default parameters=
+default values to function parameters so that if caller doesnt provide that argument(we cant have non defualt argument after a default argument)
+
+def sum(a,b=1):
+return a+b
+print(sum(5))
+
+#BUILTIN functions
+LOGIC OF THESE ARE ALREADY WRITTEN IN PYTHON!
+print()
+input()
+type()
+range()
+
+#LAMBDA functions
+short one liner functions which performs simple tasks
+these are anonymous and dont have names like def
+
+square=lambda x:x*x
+print(square(5))
+
+
+n=int(input("enter"))
+fact=1
+for i in range(1,n+1):
+fact*=i
+print(fact)
+
+def factorial(n):
+    if n == 0 or n == 1:      # Base case
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))
