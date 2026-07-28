@@ -1,0 +1,47 @@
+these conditional statements lets our program decide what to do based on your conditions (true/false)
+.if
+.else
+.elif
+
+#vote eligibility(here based on the condition that we can only vote if a certain person is over 18 or equal)
+age=int(input("enter ur age"))
+if(age>=18):
+print("can vote")
+else:
+print("stfu")
+
+#traffic light
+
+color=input("enter the color")
+if(color=="red"):
+print("stop")
+elif(color=="yellow"):
+print("wait")
+else:
+print("go bruh")
+
+#in here we use logical operators 
+age=int(input("enter ur age"))
+if(age<13):
+print("u a child")
+elif(age>=13 and age<18):
+print("teenage dirt bag baby")
+else:
+print("adult")
+
+#using nesting--- placing one block of code inside another
+username=input("enter username")
+password=input("enter pass")
+if(username=="admin" and password=="123"):
+print("succesful login")
+else:
+if(username!="admin"):
+print("wrong username try again")
+else:
+print("wrong password try again")
+
+TERENARY STATEMENTS 
+they are another way or compact way to writing if else statements in one line
+age=18
+status="Adult" if age>=18 else "not adult"
+print(status)
