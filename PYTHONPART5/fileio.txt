@@ -1,0 +1,270 @@
+File I/O means reading data from files and writing data tofiles 
+
+OPENING A File
+file=open("filename","mode")
+
+common modes-
+1.read(r)-Opens file for reading (default). Error if file doesn't exist
+2.write(w)-Creates new file or overwrites existing file
+3.append(a)-adds content at end of file
+4.read+write(r+)
+5.write +read(w+) overwrites existing file 
+6.append+read(a+)
+7.binary mode(b) images videos
+
+
+
+
+1. Reading from a File
+a) read()
+
+Reads the entire file as one string.
+
+f = open("data.txt", "r")
+content = f.read()
+print(content)
+f.close()
+b) readline()
+
+Reads one line at a time.
+
+f = open("data.txt", "r")
+
+line1 = f.readline()
+line2 = f.readline()
+
+print(line1)
+print(line2)
+
+f.close()
+c) readlines()
+
+Reads all lines into a list.
+
+f = open("data.txt", "r")
+
+lines = f.readlines()
+
+print(lines)
+
+f.close()
+2. Writing to a File
+a) write()
+
+Writes a string to a file.
+
+f = open("data.txt", "w")
+
+f.write("Hello Students!")
+
+f.close()
+
+"w" mode overwrites the existing file.
+
+b) writelines()
+
+Writes multiple lines.
+
+f = open("data.txt", "a")
+
+f.writelines([
+    "Line 1\n",
+    "Line 2\n"
+])
+
+f.close()
+
+"a" means append (adds to the end of the file).
+
+3. Using with open() (Recommended)
+
+Automatically closes the file.
+
+with open("data.txt", "r") as f:
+    content = f.read()
+
+print(content)
+
+No need to write f.close().
+
+4. Deleting a File
+import os
+
+os.remove("data.txt")
+5. Exception Handling
+
+An exception is an error that occurs while the program is running.
+
+Without exception handling, the program stops.
+
+Basic Syntax
+try:
+    # Code that may cause an error
+except:
+    # Runs if an error occurs
+Example 1
+try:
+    x = 10 / 0
+except:
+    print("Error occurred!")
+
+Output
+
+Error occurred!
+Specific Exception
+ZeroDivisionError
+try:
+    print(10 / 0)
+
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+ValueError
+try:
+    x = int(input("Enter a number: "))
+
+except ValueError:
+    print("Invalid input!")
+FileNotFoundError
+try:
+    f = open("data.txt")
+
+except FileNotFoundError:
+    print("File not found!")
+6. else Block
+
+Runs only if no exception occurs.
+
+try:
+    x = int(input("Enter a number: "))
+
+except ValueError:
+    print("Invalid Input")
+
+else:
+    print("You entered:", x)
+7. finally Block
+
+Runs always, whether an exception occurs or not.
+
+Used for cleanup (closing files, releasing resources).
+
+try:
+    f = open("data.txt")
+    print(f.read())
+
+except FileNotFoundError:
+    print("File not found!")
+
+finally:
+    print("Execution completed.")
+8. List Comprehension
+
+A short way to create lists.
+
+Syntax
+[expression for item in iterable]
+Example 1
+
+Create numbers 1–5.
+
+nums = [x for x in range(1, 6)]
+
+print(nums)
+
+Output
+
+[1, 2, 3, 4, 5]
+Example 2 (Condition)
+
+Even numbers from 1–10.
+
+evens = [x for x in range(1, 11) if x % 2 == 0]
+
+print(evens)
+
+Output
+
+[2, 4, 6, 8, 10]
+Example 3 (if-else)
+labels = [
+    "Even" if x % 2 == 0 else "Odd"
+    for x in range(1, 6)
+]
+
+print(labels)
+
+Output
+
+['Odd', 'Even', 'Odd', 'Even', 'Odd']
+9. JSON Module
+
+JSON = JavaScript Object Notation
+
+Used to exchange data between programs and APIs.
+
+Import the module:
+
+import json
+10. json.dumps()
+
+Converts a Python object into a JSON string.
+
+import json
+
+data = {
+    "name": "Aisha",
+    "city": "Delhi"
+}
+
+json_string = json.dumps(data)
+
+print(json_string)
+11. json.loads()
+
+Converts a JSON string into a Python dictionary.
+
+import json
+
+json_string = '{"name":"Aisha","city":"Delhi"}'
+
+data = json.loads(json_string)
+
+print(data)
+12. Writing JSON to a File (json.dump())
+import json
+
+data = {
+    "name": "Aisha",
+    "city": "Delhi"
+}
+
+with open("data.json", "w") as f:
+    json.dump(data, f, indent=4)
+
+indent=4 makes the JSON file neat and readable.
+
+13. Reading JSON from a File (json.load())
+import json
+
+with open("data.json", "r") as f:
+    data = json.load(f)
+
+print(data)
+Quick Revision Table
+Function	Purpose
+read()	Reads the entire file
+readline()	Reads one line
+readlines()	Reads all lines into a list
+write()	Writes a string
+writelines()	Writes multiple lines
+with open()	Opens and automatically closes a file
+os.remove()	Deletes a file
+try	Code that may cause an exception
+except	Handles the exception
+else	Executes if no exception occurs
+finally	Always executes
+List Comprehension	Creates lists in one line
+json.dumps()	Python object → JSON string
+json.loads()	JSON string → Python object
+json.dump()	Write Python object to JSON file
+json.load()	Read JSON file into Python object
