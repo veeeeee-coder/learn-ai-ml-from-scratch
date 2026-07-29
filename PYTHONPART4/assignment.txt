@@ -1,0 +1,408 @@
+class BankAccount:
+
+    def __init__(self, accno, ownername, bal):
+        self.accno = accno
+        self.ownername = ownername
+        self.bal = bal
+
+    def deposit(self, money):
+        self.bal += money
+        print(f"Deposited {money}")
+        print(f"Current Balance = {self.bal}")
+
+    def withdraw(self, amount):
+        if amount <= self.bal:
+            self.bal -= amount
+            print(f"Withdrawn {amount}")
+            print(f"Current Balance = {self.bal}")
+        else:
+            print("Insufficient Balance")
+
+    def checkbalance(self):
+        print(f"Current Balance = {self.bal}")
+
+
+# Creating an object
+acc1 = BankAccount(101, "Rahul", 5000)
+
+# Calling methods
+acc1.checkbalance()
+acc1.deposit(2000)
+acc1.withdraw(1500)
+acc1.checkbalance()
+
+
+
+class Book:
+
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+        self.reviews = []
+
+    def add_review(self, review):
+        self.reviews.append(review)
+
+    def count_reviews(self):
+        print("Number of reviews:", len(self.reviews))
+
+    def display_reviews(self):
+        print("Reviews:")
+        for review in self.reviews:
+            print(review)
+
+
+book = Book("Python", "Guido")
+
+book.add_review("Excellent book")
+book.add_review("Easy to understand")
+
+book.count_reviews()
+book.display_reviews()
+
+
+class Student:
+
+    def __init__(self):
+        self.__name = ""
+        self.__roll_no = 0
+        self.__marks = 0
+
+    def set_name(self, name):
+        if name != "":
+            self.__name = name
+        else:
+            print("Name cannot be empty")
+
+    def get_name(self):
+        return self.__name
+
+    def set_roll_no(self, roll):
+        if 1 <= roll <= 100:
+            self.__roll_no = roll
+        else:
+            print("Invalid Roll Number")
+
+    def get_roll_no(self):
+        return self.__roll_no
+
+    def set_marks(self, marks):
+        if marks >= 0:
+            self.__marks = marks
+        else:
+            print("Marks cannot be negative")
+
+    def get_marks(self):
+        return self.__marks
+
+
+s = Student()
+
+s.set_name("Rahul")
+s.set_roll_no(15)
+s.set_marks(95)
+
+print(s.get_name())
+print(s.get_roll_no())
+print(s.get_marks())
+
+
+
+
+
+
+
+
+class Shape:
+    def area(self):
+        print("Area of Shape")
+
+
+class Circle(Shape):
+    def area(self):
+        r = 5
+        print("Area =", 3.14 * r * r)
+
+
+class Rectangle(Shape):
+    def area(self):
+        l = 5
+        b = 4
+        print("Area =", l * b)
+
+
+class Triangle(Shape):
+    def area(self):
+        b = 6
+        h = 8
+        print("Area =", 0.5 * b * h)
+
+
+c = Circle()
+r = Rectangle()
+t = Triangle()
+
+c.area()
+r.area()
+t.area()
+
+
+
+
+class Vehicle:
+
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+
+class Car(Vehicle):
+
+    def __init__(self, brand, model, seats):
+        super().__init__(brand, model)
+        self.seats = seats
+
+    def display(self):
+        print(self.brand, self.model, self.seats)
+
+
+class Bike(Vehicle):
+
+    def __init__(self, brand, model, engine_cc):
+        super().__init__(brand, model)
+        self.engine_cc = engine_cc
+
+    def display(self):
+        print(self.brand, self.model, self.engine_cc)
+
+
+c = Car("Toyota", "Innova", 7)
+b = Bike("Honda", "Shine", 125)
+
+c.display()
+b.display()
+
+
+
+
+from abc import ABC, abstractmethod
+
+
+class Employee(ABC):
+
+    @abstractmethod
+    def calculate_salary(self):
+        pass
+
+
+class Intern(Employee):
+
+    def calculate_salary(self):
+        print("Salary = 10000")
+
+
+class FullTimeEmployee(Employee):
+
+    def calculate_salary(self):
+        print("Salary = 50000")
+
+
+class ContractEmployee(Employee):
+
+    def calculate_salary(self):
+        print("Salary = 30000")
+
+
+i = Intern()
+f = FullTimeEmployee()
+c = ContractEmployee()
+
+i.calculate_salary()
+f.calculate_salary()
+c.calculate_salary()
+
+
+class Person:
+
+    def __init__(self, name, age=None, address=None):
+        self.name = name
+        self.age = age
+        self.address = address
+
+    def display(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Address:", self.address)
+
+
+p1 = Person("Rahul")
+p2 = Person("Rahul", 20)
+p3 = Person("Rahul", 20, "Hyderabad")
+
+p1.display()
+p2.display()
+p3.display()
+
+
+
+class Player:
+
+    player_count = 0
+
+    def __init__(self, name, level):
+        self.name = name
+        self.level = level
+        Player.player_count += 1
+
+    def display(self):
+        print("Name:", self.name)
+        print("Level:", self.level)
+
+
+p1 = Player("Virat", 10)
+p2 = Player("Rohit", 8)
+p3 = Player("Dhoni", 12)
+
+p1.display()
+p2.display()
+p3.display()
+
+print("Total Players:", Player.player_count)
+
+
+
+
+
+
+class Father:
+
+    def father_quality(self):
+        print("Father is hardworking")
+
+
+class Mother:
+
+    def mother_quality(self):
+        print("Mother is caring")
+
+
+class Child(Father, Mother):
+
+    def child_quality(self):
+        print("Child is talented")
+
+
+c = Child()
+
+c.father_quality()
+c.mother_quality()
+c.child_quality()
+
+
+
+# -------------------------------
+# Message Class
+# -------------------------------
+
+class Message:
+    message_counter = 1  # Simple counter
+
+    def __init__(self, sender, content):
+        self.sender = sender
+        self.content = content
+        self.id = Message.message_counter
+        Message.message_counter += 1
+
+    def __str__(self):
+        return f"({self.id}) {self.sender.username}: {self.content}"
+
+
+# -------------------------------
+# User Class
+# -------------------------------
+
+class User:
+
+    def __init__(self, username):
+        self.username = username
+        self.chatroom = None
+
+    def join_chatroom(self, chatroom):
+        if self.chatroom:
+            print(f"{self.username} is already in a chatroom.")
+        else:
+            chatroom.add_user(self)
+            self.chatroom = chatroom
+            print(f"{self.username} joined {chatroom.name}")
+
+    def leave_chatroom(self):
+        if not self.chatroom:
+            print(f"{self.username} is not in any chatroom.")
+        else:
+            self.chatroom.remove_user(self)
+            print(f"{self.username} left {self.chatroom.name}")
+            self.chatroom = None
+
+    def send_message(self, content):
+        if not self.chatroom:
+            print(f"{self.username} cannot send a message (not in a chatroom).")
+        else:
+            self.chatroom.broadcast(self, content)
+
+
+# -------------------------------
+# ChatRoom Class
+# -------------------------------
+
+class ChatRoom:
+
+    def __init__(self, name):
+        self.name = name
+        self.users = []
+        self.messages = []
+
+    def add_user(self, user):
+        self.users.append(user)
+
+    def remove_user(self, user):
+        self.users.remove(user)
+
+    def broadcast(self, sender, content):
+        message = Message(sender, content)
+        self.messages.append(message)
+        print(message)
+
+    def show_chat_history(self):
+        print(f"\nChat History of {self.name}:")
+        for msg in self.messages:
+            print(msg)
+        print()
+
+
+# ---------------------------------------
+# Example Usage
+# ---------------------------------------
+
+if __name__ == "__main__":
+
+    room = ChatRoom("Python Lounge")
+
+    u1 = User("Alice")
+    u2 = User("Bob")
+    u3 = User("Charlie")
+
+    u1.join_chatroom(room)
+    u2.join_chatroom(room)
+
+    u1.send_message("Hello everyone!")
+    u2.send_message("Hi Alice!")
+
+    u3.join_chatroom(room)
+    u3.send_message("Hey guys, what's up?")
+
+    room.show_chat_history()
+
+    u1.leave_chatroom()
+    u2.leave_chatroom()
+    u3.leave_chatroom()
+    

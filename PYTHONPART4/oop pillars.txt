@@ -1,0 +1,187 @@
+4 pillars
+
+1.encapsulation (wrapping up data and method  into single unit )
+
+2.abstraction (hiding unnecessary deets)
+
+3.inheritance (subclass uses parent class attributes)
+
+4.polymorphism(same functions in different forms)
+
+
+1.encapsulation(wrapping up data and method/functions  into single unit )
+
+like a capsule
+data hiding 
+
+
+class BankAccount:
+def __init__(self,name,balance):
+self.name=name #public
+self.__balance=balance  #private-data mangling (if one underscore its protected)
+
+def get_bal(self):
+return self.__balance
+
+def set_bal(self,newbal):
+self.__balance=newbal
+
+acc1=BankAccount("anu",100_000)
+acc1.set_bal(200_000)
+print(acc1.name,acc1._BankAccount__balance)
+
+--acc1.get_bal
+USE GETTER AND SETTER
+
+
+
+
+
+
+
+2.inheritance-- reusing attr and methods from a parents (base) class
+
+class Employee:
+starttime="10am"
+endtime="9pm"
+
+def change_time(self,new_end_time):
+self.endtime=new_end_time
+
+class Teacher(Employee):
+def __init__(self,subject):
+self.subject=subject
+
+class AdminStaff(Employee):
+def __init__(self,role):
+self.role=role 
+
+
+t1=Teacher("Math")
+t1.change_time("5pm")
+print(t1.subject,t1.starttime,t1.endtime) 
+
+
+
+class Employee:
+start_time="10am"
+end_time="8pm"
+
+class AdminStaff(Employee):
+def __init__(self,role):
+self.role=role
+
+class Accountant(AdminStaff):
+def __init__(self,salary,role):
+super().__init__(role)
+self.salary=salary
+
+acc1=Accountant(25_000,"CA")
+print(acc1.role,acc1.salary,acc1.start_time,acc.end_time)
+
+
+
+
+
+class Teacher:
+def __init__(self,salary):
+self.salary=salary
+
+class Student:
+def __init__(self,gpa):
+self.gpa=gpa
+
+class TA(Teacher,Student):
+def __init__(self,salary,gpa,name):
+super().__init__(salary)
+Student.__init__(self,gpa)
+self.name=name
+
+ta1=TA(15_000,9.3,"veee")
+print(ta1.name,ta1.gpa,ta1.role)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ABSTRACTION hiding internal deets and showing only essesntial features
+
+use abstract class which are blueprint for other class 
+they are part of abc module 
+
+
+
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def make_sound(self):
+        pass
+
+class Lion(Animal):
+    def make_sound(self):
+        print("Roar!")
+
+class Cow(Animal):
+    def make_sound(self):
+        print("Moo!")
+
+lion = Lion()
+lion.make_sound()
+
+cow = Cow()
+cow.make_sound()
+
+
+
+
+POLYMORPHISM
+many forms
+multiple fnx same names 
+
+operator overloading
+(add ya concatenate)
+
+1.function overriding
+(inheritance)
+redefining parent class fnx in child class
+
+
+class Employee:
+def get_designation(self):
+print("desgination=employee")
+
+class Teacher(Employee):
+def get_designation(self):
+print("desgination=teacher")
+
+t1=Teacher()
+t1.get_designation()
+
+
+
+2.DUCK TYPING
+walks like aduck and quacks like aduck then its a duck 
+
+class Accountant:
+def get_designation(self):
+print("desgination=accountant")
+
+class Teacher(Employee):
+def get_designation(self):
+print("desgination=teacher")
+
+t1=Teacher()
+t1.get_designation()
+
+a1=Accountant()
+a1.get_designation()
