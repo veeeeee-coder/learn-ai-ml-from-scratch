@@ -1,0 +1,30 @@
+.unordered(no indexing or slicing)
+.unique elements
+.mutable
+.set elements are immutable
+
+set={1,2,3,4,5,6,6,6,7}
+print(set)  {1,2,3,4,5,6,7}
+
+type,len
+
+empty_set=set()
+
+use for unique ness and math operation
+
+methods
+.add(val) adds element to set
+remove(val) removes an element
+clear()
+pop() removes and returns an random element
+s1.union(s2)
+collection of unique values in both sets
+
+s1.intersection(s2)
+collection of all common and unique value in both sets
+
+a={1,2,3}
+b={3,4,5}
+
+union= {1,2,3,4,5}
+intersection {3}

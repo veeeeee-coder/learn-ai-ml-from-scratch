@@ -1,0 +1,25 @@
+.unordered
+.mutable
+
+KEY VALUE PAIRS
+.dict keys must be unique and immutable
+
+student={
+    "name":"bob",
+    "age":20
+}
+
+to access
+print(student["name"])
+
+methods
+.keys()  returns all keys
+.values()  returns all values
+.items() returns key pair values in tuple FORMATTING
+get(key)  throws none if not there(safe)
+update(new item)  adds new item to dict
+
+for key,value in student.items():
+print(key,value)
+
+

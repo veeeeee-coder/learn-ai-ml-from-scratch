@@ -1,0 +1,58 @@
+collection of items in python
+items in a list are
+.ordered(items have defined order and can be access by index)
+.changeable(items can be changed after list is created)
+.ccan have dupes
+.heterogeneous(can have different datatypes)
+
+.lists can hold any dtype
+.lists are written in []
+
+list1=[1,2,3,4,5]
+print(type(list1))
+
+INDEXING
+print(list1[0])  #1
+print(list1[-1]) #5
+
+MODIFY elements
+list1=[1,2,3,4,5]
+list1[0]=67
+print(list1) 67 2 3 4 5
+
+slicing same as strings
+
+len()  no of elementws in list
+append(element) adds element to endddd
+insert(element,idx) 
+sort()
+reverse()
+
+listt=[5,2,9]
+print(len(listt))
+
+listt.append(9)
+print(listt)
+
+listt.insert(4,2)
+print(listt)
+
+listt.sort()
+
+listt.reverse()
+
+LOOOOPSSS
+num=[10,20,30,40]
+for i in num:
+print(num)
+
+LINEAR SEARCH
+num=[10,20,30,40]
+x=30
+idx=0
+for n in num:
+if n==target:
+print(found)
+break
+idx+=1
+

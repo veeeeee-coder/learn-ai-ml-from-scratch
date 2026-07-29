@@ -1,0 +1,54 @@
+sequence of characters enclosed in quotes
+str1="hello world"
+
+strings are immutable(once created contents cannot be changed directly)
+
+len()  len of string
+word="prime"
+print(len(word))
+
+Concat
+str1="vee"
+str2="desu"
+word=str1+" "+str2
+print(word)
+
+loops
+strr="apna"
+for ch in strr:
+print(ch)
+
+INDEXING
+py follows zero based INDEXING
+s="baby"
+print(s[0])
+
+SLICING
+access multiple elements at once
+string[start:stop:step]
+
+s="python"
+print(s[0:2])  #py
+print(s[2:])   #thon
+print(s[:3])   #pyt 
+print(s[::2])  #Pto eveery second characters
+print(s[::-1]) #reversed string 
+
+STRING FORMATTING
+creating dynamic strings by inserting values from variables or expressions into predefined string template
+.format()
+.f-strings
+
+1.format()
+use {} as placeholders and pass placeholder replacement values in format function
+
+name="vee"
+age=18
+text="My name is {} and i am {} years old".format(name,age)
+print(text)
+
+2.f-strings
+text=f"my name is {name} and i am {age} years old"
+print(text)
+
+

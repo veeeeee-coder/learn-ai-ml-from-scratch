@@ -1,0 +1,20 @@
+.ordered
+.immutable
+.allows dupes
+.heterogeneous
+
+tup=(10,20,30)
+emptytup=()
+singleele=(34,)
+
+
+list and tuple difference tup are immutable so they are faster\
+
+indexing,loops same as lists
+
+.index(val)  index of first occurence of any val
+count(val)   total count ofoccurence for any val
+
+tup.index(20)  1
+tup.count(10)  1
+
