@@ -1,0 +1,92 @@
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+
+print("Hello", name + ", you are", age, "years old!")
+
+
+
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+print("Sum =", num1 + num2)
+print("Difference =", num1 - num2)
+print("Product =", num1 * num2)
+print("Quotient =", num1 / num2)
+
+
+
+a = int(input("Enter first integer: "))
+b = int(input("Enter second integer: "))
+c = float(input("Enter a float: "))
+
+average = (float(a) + float(b) + float(c)) / 3
+
+print("Average =", average)
+
+
+num = input("Enter a number as a string: ")
+
+integer_value = int(num)
+float_value = float(num)
+string_value = str(num)
+
+print(integer_value, type(integer_value))
+print(float_value, type(float_value))
+print(string_value, type(string_value))
+
+
+x = 10 + 3 * 2 ** 2
+
+print(x)
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+a, b = b, a
+
+print("After swapping:")
+print("a =", a)
+print("b =", b)
+
+
+
+
+
+
+
+celsius = float(input("Enter temperature in Celsius: "))
+
+fahrenheit = (celsius * 9/5) + 32
+
+print("Temperature in Fahrenheit =", fahrenheit)
+
+
+
+radius = float(input("Enter radius: "))
+
+area = 3.14 * radius ** 2
+
+print("Area =", area)
+
+
+P = float(input("Enter Principal: "))
+R = float(input("Enter Rate: "))
+T = float(input("Enter Time: "))
+
+SI = (P * R * T) / 100
+
+print("Simple Interest =", SI)
+
+
+number = float(input("Enter a decimal number: "))
+
+integer_part = int(number)
+fractional_part = number - integer_part
+
+print("Integer part =", integer_part)
+print("Fractional part =", fractional_part)
+
+
+
+
+
