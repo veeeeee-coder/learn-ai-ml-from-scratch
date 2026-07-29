@@ -1,0 +1,39 @@
+creates objects
+__init__ to initialise our objects
+called everytime we create an object
+
+if we dont call python will do automatically
+self== current instance of class,current object!
+
+class Student:
+    def __init__(self,name,cgpa):
+    print("constructor was called")
+    self.name=name 
+    self.cgpa=cgpa
+
+    def get_cgpa(self):
+    return self.cgpa
+
+stu1=Student("Vee",9.0)
+stu2=Student("gee",8.9)
+
+print(stu1.name)
+print(stu1.get_cgpa)
+
+
+
+
+
+DEFAULT constructor
+1 parameter(Self)
+Parameterized constructor
+more than one parameter
+
+def __init__(self):
+print("obj in progress")
+
+
+
+if there are both in a program the last written constructor will be used if it doesntmatch with input it gives error 
+its not like other java and all where it detects which constructor to use acc to arguments of the given input
+

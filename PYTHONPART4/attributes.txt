@@ -1,0 +1,22 @@
+atrributes are like properties
+class attributes   CLASS(COMMON)
+instance attributes   OBJECT(UNKIQUE)
+
+FOR A Student
+name subject and cgpa are instance attr and college name is class attr
+
+class Student:
+college_name="abc"
+def __init__(self,name,cgpa):
+self.name=name
+self.cgpa=cgpa
+
+stu1=Student("Rahul",9.8)
+print(stu1.name) 
+print(stu1.college_name)
+
+#class can only access class attributes
+through objects we can access both (more prioroity)
+
+if an attribute is same in both class and instance attribute we take it from instance becuase it has high prioroity
+

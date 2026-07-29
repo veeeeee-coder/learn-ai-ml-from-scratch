@@ -1,0 +1,32 @@
+oop
+uptill now we did procedural programming 
+oop has classes and objects
+we use it becuase its easy
+
+-mapping real world objects with code
+class blueprint  which has all the information to be stored
+objecct real world objec 
+
+CLASS=
+blueprint of an object
+(tells us how object looks)
+
+OBJECT is an instance of class
+things which occupy space in memory
+
+
+class Student:
+(now write features of students)
+subject="python"
+college="abc"
+year="4th yr"
+
+stu1=Student()
+print(stu1.subject)
+
+
+
+BLUE PRINT 
+1.properties/attributes
+2.behaviours
+
