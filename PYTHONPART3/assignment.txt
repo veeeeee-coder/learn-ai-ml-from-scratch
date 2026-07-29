@@ -1,0 +1,154 @@
+string = input("Enter a string: ")
+
+reverse = ""
+
+for ch in string:
+    reverse = ch + reverse
+
+if string == reverse:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+
+
+
+numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
+
+total = 0
+
+for num in numbers:
+    total += num
+
+average = total / len(numbers)
+
+print("Average =", average)
+
+
+
+list1 = list(map(int, input("Enter first list: ").split()))
+list2 = list(map(int, input("Enter second list: ").split()))
+
+result = list1 + list2
+result.sort()
+
+print("Merged and Sorted List:", result)
+
+
+
+numbers = tuple(map(int, input("Enter tuple elements: ").split()))
+
+even = ()
+odd = ()
+
+for num in numbers:
+    if num % 2 == 0:
+        even += (num,)
+    else:
+        odd += (num,)
+
+print("Even Tuple:", even)
+print("Odd Tuple:", odd)
+
+
+
+students = {}
+
+while True:
+    print("\nA. Add Student")
+    print("B. Update Marks")
+    print("C. Search Student")
+    print("D. Display All")
+    print("E. Exit")
+
+    choice = input("Enter choice: ").upper()
+
+    if choice == "A":
+        name = input("Enter student name: ")
+        marks = int(input("Enter marks: "))
+        students[name] = marks
+
+    elif choice == "B":
+        name = input("Enter student name: ")
+        if name in students:
+            students[name] = int(input("Enter new marks: "))
+        else:
+            print("Student not found")
+
+    elif choice == "C":
+        name = input("Enter student name: ")
+        if name in students:
+            print(name, ":", students[name])
+        else:
+            print("Student not found")
+
+    elif choice == "D":
+        for name, marks in students.items():
+            print(name, ":", marks)
+
+    elif choice == "E":
+        break
+
+    else:
+        print("Invalid Choice")
+
+
+
+
+
+words = ["apple", "banana", "kiwi", "cherry", "mango"]
+
+lengths = {}
+
+for word in words:
+    lengths[word] = len(word)
+
+print(lengths)
+
+
+
+
+text = input("Enter a string: ")
+
+count = 0
+
+for ch in text:
+    if ch == " ":
+        count += 1
+
+print("Number of spaces:", count)
+
+
+
+
+list1 = list(map(int, input("Enter first list: ").split()))
+list2 = list(map(int, input("Enter second list: ").split()))
+
+set1 = set(list1)
+set2 = set(list2)
+
+if set1.isdisjoint(set2):
+    print("The lists share no common elements.")
+else:
+    print("The lists share common elements.")
+
+
+
+numbers = list(map(int, input("Enter list elements: ").split()))
+
+duplicates = set()
+
+for num in numbers:
+    if numbers.count(num) > 1:
+        duplicates.add(num)
+
+print("Duplicate elements:", duplicates)
+
+
+
+
+text = input("Enter a string: ")
+
+unique = set(text)
+
+print("Unique characters:", unique)
+print("Count of unique characters:", len(unique))
